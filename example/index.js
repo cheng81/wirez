@@ -1,0 +1,1 @@
+require('wirez').r('./a')

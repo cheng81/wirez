@@ -1,0 +1,21 @@
+{
+  "name": "wirez",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cheng81/wirez.git"
+  },
+  "author": "Francesco Zanitti <fzanitti@gmail.com>",
+  "main": "index",
+  "bin": { "wirez": "./bin/wirez.js" },
+  "directories": {
+    "lib": "./lib"
+  },
+  "dependencies": {
+    "wu": ">=0.1.8"
+  },
+
+  "engines": {
+    "node": "*"
+  }
+}
