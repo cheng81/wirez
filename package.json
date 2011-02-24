@@ -1,21 +1,48 @@
 {
   "name": "wirez",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/cheng81/wirez.git"
   },
   "author": "Francesco Zanitti <fzanitti@gmail.com>",
   "main": "index",
-  "bin": { "wirez": "./bin/wirez.js" },
+  "bin": {
+    "wirez": "./bin/wirez.js"
+  },
   "directories": {
-    "lib": "./lib"
+    "lib": "./lib",
+    "bin": "./bin"
   },
   "dependencies": {
     "wu": ">=0.1.8"
   },
-
   "engines": {
     "node": "*"
-  }
+  },
+  "modules": {
+    "manager/index.js": "lib/manager/index.js",
+    "manager/manager.js": "lib/manager/manager.js",
+    "manager/command/info.js": "lib/manager/command/info.js",
+    "manager/command/install.js": "lib/manager/command/install.js",
+    "manager/command/list.js": "lib/manager/command/list.js",
+    "manager/command/shutdown.js": "lib/manager/command/shutdown.js",
+    "manager/command/start.js": "lib/manager/command/start.js",
+    "manager/command/stop.js": "lib/manager/command/stop.js",
+    "manager/io/tcp.js": "lib/manager/io/tcp.js",
+    "reloader/index.js": "lib/reloader/index.js",
+    "reloader/misc.js": "lib/reloader/misc.js",
+    "reloader/reloader.js": "lib/reloader/reloader.js",
+    "wirez/dependencies.js": "lib/wirez/dependencies.js",
+    "wirez/graph.js": "lib/wirez/graph.js",
+    "wirez/index.js": "lib/wirez/index.js",
+    "wirez/misc.js": "lib/wirez/misc.js",
+    "wirez/wirez.js": "lib/wirez/wirez.js",
+    "wirez/wirezmod.js": "lib/wirez/wirezmod.js",
+    "bootstrap/bootstrap.js": "lib/bootstrap/bootstrap.js",
+    "bootstrap/index.js": "lib/bootstrap/index.js"
+  },
+  "files": [
+    ""
+  ]
 }
