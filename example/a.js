@@ -1,6 +1,6 @@
 var wirez = require('wirez')
   , b = wirez.r('./b')
-  , log = wirez.newLogger('B')
+  , log = wirez.newLogger('A')
 
 
 // magic function, called when this module starts
