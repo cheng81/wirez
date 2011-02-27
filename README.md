@@ -8,8 +8,6 @@
 
 ## Install
 
-<strike>I am going to publish on npm, in the mean time you can download the code and npm-link it.</strike>
-
 `npm install wirez`
 
 ## Features
