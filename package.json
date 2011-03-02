@@ -1,6 +1,6 @@
 {
   "name": "wirez",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git://github.com/cheng81/wirez.git"
@@ -21,15 +21,8 @@
     "node": "*"
   },
   "modules": {
-    "manager/index.js": "lib/manager/index.js",
-    "manager/manager.js": "lib/manager/manager.js",
-    "manager/command/info.js": "lib/manager/command/info.js",
-    "manager/command/install.js": "lib/manager/command/install.js",
-    "manager/command/list.js": "lib/manager/command/list.js",
-    "manager/command/shutdown.js": "lib/manager/command/shutdown.js",
-    "manager/command/start.js": "lib/manager/command/start.js",
-    "manager/command/stop.js": "lib/manager/command/stop.js",
-    "manager/io/tcp.js": "lib/manager/io/tcp.js",
+    "bootstrap/bootstrap.js": "lib/bootstrap/bootstrap.js",
+    "bootstrap/index.js": "lib/bootstrap/index.js",
     "reloader/index.js": "lib/reloader/index.js",
     "reloader/misc.js": "lib/reloader/misc.js",
     "reloader/reloader.js": "lib/reloader/reloader.js",
@@ -39,8 +32,17 @@
     "wirez/misc.js": "lib/wirez/misc.js",
     "wirez/wirez.js": "lib/wirez/wirez.js",
     "wirez/wirezmod.js": "lib/wirez/wirezmod.js",
-    "bootstrap/bootstrap.js": "lib/bootstrap/bootstrap.js",
-    "bootstrap/index.js": "lib/bootstrap/index.js"
+    "manager/index.js": "lib/manager/index.js",
+    "manager/manager.js": "lib/manager/manager.js",
+    "manager/command/hotreload.js": "lib/manager/command/hotreload.js",
+    "manager/command/info.js": "lib/manager/command/info.js",
+    "manager/command/install.js": "lib/manager/command/install.js",
+    "manager/command/list.js": "lib/manager/command/list.js",
+    "manager/command/reload.js": "lib/manager/command/reload.js",
+    "manager/command/shutdown.js": "lib/manager/command/shutdown.js",
+    "manager/command/start.js": "lib/manager/command/start.js",
+    "manager/command/stop.js": "lib/manager/command/stop.js",
+    "manager/io/tcp.js": "lib/manager/io/tcp.js"
   },
   "files": [
     ""
