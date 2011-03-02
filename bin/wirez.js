@@ -9,6 +9,17 @@
 	var args = process.argv
 	args.shift()
 	args.shift()
+	
+	var wirezPath = '.wirez'
+	var checkWirezDir = function(parentPath) {
+		var wirezp = path.join( parentPath,wirezPath )
+		if( !path.existsSync( wirezp ) ) {
+			fs.mkdirSync( wirezp,'755' )
+		}
+	}
+	
+	checkWirezDir( process.cwd() )
+	var mngrFile = path.join( process.cwd(),wirezPath,'wirezmanager.unixdgram' )
 
 	var start = function( bootstrap,reloader,port ) {
 		
@@ -48,9 +59,9 @@
 	}
 	
 	if( args.length==0 ) {
-		start(true,true, 'wirezmanager.unixdgram' )
+		start(true,true, mngrFile )
 	} else {
-		cli('wirezmanager.unixdgram',args)
+		cli(mngrFile,args)
 	}
 	
 	
