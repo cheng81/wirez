@@ -17,6 +17,14 @@
  - Reload dependent modules
  - Script version for start an application
 
+## When to use Wirez
+
+First and most important: you do not use Wirez to handle system modules (such as `http` or other npm-installed modules). Instead, you want to use Wirez to handle runtime objects, and relationships between them.
+
+As a simple example, imagine that you have an application server that exposes two functions, `register` and `remove`, to manage simple `HTTP` applications. One wirez-module is the one that creates the http-server, and each application requires this module.
+
+Now, if you use Wirez to manage the application modules, you will be able to add, remove and restart http applications without bringing down the http server. See `example/simple-http`.
+
 ## How to use it
 
 Instead of calling `require(module)`, call `require('wirez').r(module)`. This way, Wirez will link `module` as a dependency for the current module. If the dependency is at a certain point stopped, the calling module will be stopped too.
@@ -31,7 +39,7 @@ Then navigate on the directory and type
 
 This will start node and Wirez. If you change one of the module of your application, Wirez will notice this, and reload the changed module. Dependent modules will be reloaded too.
 
-A *very* simple example is in the example directory. Just go there and type wirez.
+A *very* simple example is in the `example/simple` directory. Just go there and type wirez.
 
 ## Wirez CLI interface
 
@@ -42,6 +50,7 @@ In the directory where you started wirez, you can issue the following commands:
  - `wirez info` displays various info. As of versions 0.0.2, only the module dependencies are showed
  - `wirez start <module>` start a stopped module
  - `wirez stop <module>` stop an active module
+ - `wirez reload <module>` reload a module. Does not delete the code cache
  - `wirez hotreload <module>` remove the code cache and reload the module
  - `wirez install <module>` install a module
  - `wirez shutdown` stop all modules and wirez itself
