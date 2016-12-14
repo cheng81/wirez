@@ -13,7 +13,7 @@
 	var wirezPath = '.wirez'
 	var checkWirezDir = function(parentPath) {
 		var wirezp = path.join( parentPath,wirezPath )
-		if( !path.existsSync( wirezp ) ) {
+		if( !fs.existsSync( wirezp ) ) {
 			fs.mkdirSync( wirezp,'755' )
 		}
 	}
